@@ -17,7 +17,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
   
 include 'Partials/dbConnect.php';
 
-
 $productId = $_POST['productId'];
 $productName = $_POST['productName'];
 $category = $_POST['Category']; // Get the selected category
@@ -27,6 +26,8 @@ $productDescription = $_POST['productDescription'];
 $productStock = $_POST['productStock'];
 $productPrice = $_POST['productPrice'];
 
+$productName = mysqli_real_escape_string($conn, $productName);
+$productDescription = mysqli_real_escape_string($conn, $productDescription);
 
 if (
     
@@ -54,7 +55,7 @@ if (
     {
 
     
-        $sql = "INSERT INTO `product` (`Product_id`, `Name`, `Quantity`, `Price`, `Manufacturer_id`, `Category_id`, `sub_Category_id`,`description`,`vendor_id`) VALUES ('$productId', '$productName', '$productStock', '$productPrice', '$manufacturer', '$category', '$subCategory','$productDescription','$regNo')";
+        $sql = "INSERT INTO `product` (`Product_id`, `Name`, `Quantity`, `Price`, `Manufacturer_id`, `Category_id`, `sub_Category_id`, `description`, `vendor_id`) VALUES ('$productId', '$productName', '$productStock', '$productPrice', '$manufacturer', '$category', '$subCategory', '$productDescription', '$regNo')";
 
         $result = mysqli_query($conn,$sql);
 
@@ -153,13 +154,16 @@ if (
 
             <div class="form-floating mb-3">
                 <select class="form-select" id="Manufacturer" aria-label="Floating label select example" name = "Manufacturer">
-                    <option selected>Select Manufacturer</option>
+                    <option selected value = "0">None of The below</option>
                     <option value="1">Amul</option>
                     <option value="2">Apollo Pharmacy</option>
                     <option value="3">Haldiram's</option>
                     <option value="4">Himalaya Herbals</option>
                     <option value="5">Parle</option>
                     <option value="6">Tata</option>
+                    <option value="7">Cosmic Byte</option>
+                    <option value="8">Samsung</option>
+                    
                 </select>
                 <label for="Manufacturer">Manufacturer</label>
                 
@@ -187,7 +191,8 @@ if (
 
             
             <button type="submit" class="btn btn-primary ">Insert</button>
-          </form>
+          
+        </form>
       </div>
       
       

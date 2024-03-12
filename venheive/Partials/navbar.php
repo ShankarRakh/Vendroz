@@ -26,7 +26,7 @@ echo '
                 {
                   echo '
                   <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/venheive/customersProduct1.php">Products</a>
+                  <a class="nav-link active" aria-current="page" href="/venheive/customersProduct.php">Products</a>
                 </li>';
                 }
 
@@ -35,6 +35,10 @@ echo '
                   echo '
                   <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="/venheive/vendorProfile.php">Profile</a>
+                </li>';
+                  echo '
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/venheive/vendorShop.php">Reg Shop</a>
                 </li>';
                   echo '
                   <li class="nav-item">
