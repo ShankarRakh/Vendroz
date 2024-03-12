@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Circular Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card{
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product1
+        {
+            background-image: url("images/cat1.webp");
+            background-repeat: no-repeat;
+            background-size: cover ;
+        }
+        .product2
+        {
+            background-image: url("images/cat2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover ;
+        }
+        .product3
+        {
+            background-image: url("images/cat3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover ;
+        }
+        .product4
+        {
+            background-image: url("images/cat4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover ;
+        }
+        .product5
+        {
+            background-image: url("images/cat5.webp");
+            background-repeat: no-repeat;
+            background-size: cover ;
+        }
+        
+        .circle:hover {
+            /* background-color: #2980b9; */
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='page1.html';">
+            <div class="circle product1">
+                <a href="page1.html"><img src="" alt=""></a>
+            </div>
+            <div class="content">Food and Dining</div>
+        </div>
+        <div class="card" onclick="window.location.href='page4.html';">
+            <div class="circle product4">
+                <a href="page4.html"><img src="" alt=""></a>
+            </div>
+            <div class="content">Services</div>
+        </div>
+        <div class="card" onclick="window.location.href='page2.html';">
+            <div class="circle product2">
+                <a href="page2.html"></a>
+            </div>
+            <div class="content">Retail</div>
+        </div>
+        <div class="card" onclick="window.location.href='page3.html';">
+            <div class="circle product3">
+                <a href="page3.html"><img src="" alt=""></a>
+            </div>
+            <div class="content">Health and Wellness</div>
+        </div>
+        <div class="card" onclick="window.location.href='page5.html';">
+            <div class="circle product5">
+                <a href="page5.html"><img src="" alt=""></a>
+            </div>
+            <div class="content">Technology and Electronics</div>
+        </div>
+    </div>
+</body>
+</html>
